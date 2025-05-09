@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basit Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Basit Blog</div>
+            <ul class="nav-links">
+                <li><a href="#home">Ana Sayfa</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#archive">Arşiv</a></li>
+                <li><a href="#about">Hakkımda</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-container">
+                    <input type="text" placeholder="Blog'da ara..." class="search-input">
+                    <button class="search-button"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="social-share">
+                    <button class="social-share-btn" title="Twitter'da Paylaş"><i class="fab fa-twitter"></i></button>
+                    <button class="social-share-btn" title="Facebook'ta Paylaş"><i class="fab fa-facebook"></i></button>
+                    <button class="social-share-btn" title="LinkedIn'de Paylaş"><i class="fab fa-linkedin"></i></button>
+                </div>
+                <button class="theme-toggle" title="Tema Değiştir">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="reading-list-toggle" title="Okuma Listesi">
+                    <i class="fas fa-bookmark"></i>
+                    <span class="reading-list-count">0</span>
+                </button>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Hoş Geldiniz</h1>
+            <p>Teknoloji, yaşam ve düşünceler üzerine yazılarımı paylaştığım blog sayfama hoş geldiniz.</p>
+            <div class="hero-buttons">
+                <a href="#blog" class="btn primary">Blog Yazıları</a>
+                <a href="#about" class="btn secondary">Hakkımda</a>
+            </div>
+        </section>
+
+        <div class="main-content">
+            <div class="content-wrapper">
+                <section id="blog" class="blog-posts">
+                    <h2 class="section-title">Son Yazılar</h2>
+                    <div class="posts-grid">
+                        <article class="post">
+                            <div class="post-image">
+                                <img src="https://picsum.photos/800/400" alt="Blog Görseli">
+                                <div class="post-category">Teknoloji</div>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-navigation">
+                                    <div class="table-of-contents">
+                                        <h3>İçindekiler</h3>
+                                        <ul>
+                                            <li><a href="#giris">Giriş</a></li>
+                                            <li><a href="#yapay-zeka-nedir">Yapay Zeka Nedir?</a></li>
+                                            <li><a href="#gunluk-hayatta-yapay-zeka">Günlük Hayatta Yapay Zeka</a></li>
+                                            <li><a href="#gelecekte-yapay-zeka">Gelecekte Yapay Zeka</a></li>
+                                            <li><a href="#sonuc">Sonuç</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="reading-progress">
+                                        <div class="progress-bar"></div>
+                                    </div>
+                                </div>
+                                <div class="post-stats">
+                                    <div class="stats-header">
+                                        <h3>Yazı İstatistikleri</h3>
+                                        <div class="stats-period">
+                                            <button class="active" data-period="week">Haftalık</button>
+                                            <button data-period="month">Aylık</button>
+                                            <button data-period="year">Yıllık</button>
+                                        </div>
+                                    </div>
+                                    <div class="stats-charts">
+                                        <div class="chart-container">
+                                            <canvas id="viewsChart"></canvas>
+                                            <h4>Görüntülenme</h4>
+                                        </div>
+                                        <div class="chart-container">
+                                            <canvas id="sharesChart"></canvas>
+                                            <h4>Paylaşım</h4>
+                                        </div>
+                                        <div class="chart-container">
+                                            <canvas id="engagementChart"></canvas>
+                                            <h4>Etkileşim</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2>Yapay Zeka ve Geleceğimiz</h2>
+                                <div class="post-meta">
+                                    <span><i class="fas fa-calendar"></i> 1 Mart 2024</span>
+                                    <span><i class="fas fa-user"></i> Zeynep Nur</span>
+                                    <span><i class="fas fa-comments"></i> 5 Yorum</span>
+                                    <span><i class="fas fa-eye"></i> 1.2K görüntülenme</span>
+                                    <span><i class="fas fa-share"></i> 45 paylaşım</span>
+                                    <span><i class="fas fa-heart"></i> 128 beğeni</span>
+                                </div>
+                                <p>Yapay zeka teknolojilerinin günlük hayatımıza etkileri ve gelecekte bizi bekleyen değişimler hakkında detaylı bir inceleme.</p>
+                                <div class="post-tags">
+                                    <a href="#" class="tag">Yapay Zeka</a>
+                                    <a href="#" class="tag">Teknoloji</a>
+                                    <a href="#" class="tag">Gelecek</a>
+                                </div>
+                                <div class="post-footer">
+                                    <a href="#" class="read-more">Devamını Oku</a>
+                                    <div class="post-actions">
+                                        <button class="like-btn" data-post-id="1">
+                                            <i class="far fa-heart"></i>
+                                            <span class="like-count">128</span>
+                                        </button>
+                                        <div class="share-buttons">
+                                            <button class="share-btn" title="Twitter'da Paylaş" data-platform="twitter">
+                                                <i class="fab fa-twitter"></i>
+                                            </button>
+                                            <button class="share-btn" title="Facebook'ta Paylaş" data-platform="facebook">
+                                                <i class="fab fa-facebook"></i>
+                                            </button>
+                                            <button class="share-btn" title="LinkedIn'de Paylaş" data-platform="linkedin">
+                                                <i class="fab fa-linkedin"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post">
+                            <div class="post-image">
+                                <img src="https://picsum.photos/800/401" alt="Blog Görseli">
+                                <div class="post-category">Yaşam</div>
+                            </div>
+                            <div class="post-content">
+                                <h2>Dijital Detoks: Modern Çağda Denge</h2>
+                                <div class="post-meta">
+                                    <span><i class="fas fa-calendar"></i> 28 Şubat 2024</span>
+                                    <span><i class="fas fa-user"></i> Zeynep Nur</span>
+                                    <span><i class="fas fa-comments"></i> 3 Yorum</span>
+                                </div>
+                                <p>Teknoloji bağımlılığından kurtulma ve dijital dünya ile gerçek dünya arasında sağlıklı bir denge kurma yöntemleri.</p>
+                                <div class="post-tags">
+                                    <a href="#" class="tag">Dijital Detoks</a>
+                                    <a href="#" class="tag">Yaşam</a>
+                                    <a href="#" class="tag">Sağlık</a>
+                                </div>
+                                <div class="post-footer">
+                                    <a href="#" class="read-more">Devamını Oku</a>
+                                    <div class="share-buttons">
+                                        <button class="share-btn" title="Twitter'da Paylaş"><i class="fab fa-twitter"></i></button>
+                                        <button class="share-btn" title="Facebook'ta Paylaş"><i class="fab fa-facebook"></i></button>
+                                        <button class="share-btn" title="LinkedIn'de Paylaş"><i class="fab fa-linkedin"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post">
+                            <div class="post-image">
+                                <img src="https://picsum.photos/800/402" alt="Blog Görseli">
+                                <div class="post-category">Teknoloji</div>
+                            </div>
+                            <div class="post-content">
+                                <h2>Web Geliştirme Trendleri 2024</h2>
+                                <div class="post-meta">
+                                    <span><i class="fas fa-calendar"></i> 25 Şubat 2024</span>
+                                    <span><i class="fas fa-user"></i> Zeynep Nur</span>
+                                    <span><i class="fas fa-comments"></i> 7 Yorum</span>
+                                </div>
+                                <p>2024 yılında web geliştirme dünyasında öne çıkan teknolojiler ve yaklaşımlar hakkında kapsamlı bir analiz.</p>
+                                <div class="post-tags">
+                                    <a href="#" class="tag">Web Geliştirme</a>
+                                    <a href="#" class="tag">Trendler</a>
+                                    <a href="#" class="tag">2024</a>
+                                </div>
+                                <div class="post-footer">
+                                    <a href="#" class="read-more">Devamını Oku</a>
+                                    <div class="share-buttons">
+                                        <button class="share-btn" title="Twitter'da Paylaş"><i class="fab fa-twitter"></i></button>
+                                        <button class="share-btn" title="Facebook'ta Paylaş"><i class="fab fa-facebook"></i></button>
+                                        <button class="share-btn" title="LinkedIn'de Paylaş"><i class="fab fa-linkedin"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <aside class="sidebar">
+                    <div class="widget popular-posts">
+                        <h3 class="widget-title">Popüler Yazılar</h3>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="https://picsum.photos/100/100" alt="Popüler Yazı">
+                                    <div class="popular-post-content">
+                                        <h4>Yapay Zeka ve Geleceğimiz</h4>
+                                        <span><i class="fas fa-eye"></i> 1.2K görüntülenme</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="https://picsum.photos/100/101" alt="Popüler Yazı">
+                                    <div class="popular-post-content">
+                                        <h4>Dijital Detoks: Modern Çağda Denge</h4>
+                                        <span><i class="fas fa-eye"></i> 856 görüntülenme</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="https://picsum.photos/100/102" alt="Popüler Yazı">
+                                    <div class="popular-post-content">
+                                        <h4>Web Geliştirme Trendleri 2024</h4>
+                                        <span><i class="fas fa-eye"></i> 654 görüntülenme</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="widget newsletter">
+                        <h3 class="widget-title">Bülten Aboneliği</h3>
+                        <p>En yeni yazılardan haberdar olmak için bültenimize abone olun.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="E-posta adresiniz" required>
+                            <button type="submit" class="btn primary">Abone Ol</button>
+                        </form>
+                    </div>
+
+                    <div class="widget categories">
+                        <h3 class="widget-title">Kategoriler</h3>
+                        <ul>
+                            <li><a href="#">Teknoloji <span>(12)</span></a></li>
+                            <li><a href="#">Yaşam <span>(8)</span></a></li>
+                            <li><a href="#">Yazılım <span>(15)</span></a></li>
+                            <li><a href="#">Dijital Pazarlama <span>(6)</span></a></li>
+                            <li><a href="#">Tasarım <span>(9)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="widget tag-cloud">
+                        <h3 class="widget-title">Etiketler</h3>
+                        <div class="tags">
+                            <a href="#" class="tag">Yapay Zeka</a>
+                            <a href="#" class="tag">Web Geliştirme</a>
+                            <a href="#" class="tag">Dijital Detoks</a>
+                            <a href="#" class="tag">UI/UX</a>
+                            <a href="#" class="tag">JavaScript</a>
+                            <a href="#" class="tag">React</a>
+                            <a href="#" class="tag">Python</a>
+                            <a href="#" class="tag">Veri Bilimi</a>
+                            <a href="#" class="tag">Mobil Uygulama</a>
+                            <a href="#" class="tag">Blockchain</a>
+                        </div>
+                    </div>
+
+                    <div class="widget archive">
+                        <h3 class="widget-title">Arşiv</h3>
+                        <ul>
+                            <li><a href="#">Mart 2024 <span>(5)</span></a></li>
+                            <li><a href="#">Şubat 2024 <span>(8)</span></a></li>
+                            <li><a href="#">Ocak 2024 <span>(12)</span></a></li>
+                            <li><a href="#">Aralık 2023 <span>(10)</span></a></li>
+                            <li><a href="#">Kasım 2023 <span>(7)</span></a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+        <section id="about" class="about-section">
+            <h2 class="section-title">Hakkımda</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://picsum.photos/400/400" alt="Profil Fotoğrafı">
+                </div>
+                <div class="about-text">
+                    <h3>Merhaba, Ben Zeynep Nur</h3>
+                    <p>Teknoloji ve yazılım dünyasında 5 yıllık deneyime sahip bir web geliştiricisiyim. Bu blog, deneyimlerimi ve bilgilerimi paylaşmak için oluşturduğum bir platform.</p>
+                    <p>Yazılım geliştirme, yapay zeka ve dijital dönüşüm konularında uzmanlaşmış durumdayım. Amacım, teknoloji dünyasındaki gelişmeleri anlaşılır bir dille okuyucularıma aktarmak.</p>
+                    <div class="skills">
+                        <span class="skill-tag">Web Geliştirme</span>
+                        <span class="skill-tag">Yapay Zeka</span>
+                        <span class="skill-tag">UI/UX Tasarım</span>
+                        <span class="skill-tag">Dijital Pazarlama</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">İletişim</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>E-posta</h3>
+                        <p>info@basitblog.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Telefon</h3>
+                        <p>+90 555 123 4567</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Adres</h3>
+                        <p>İstanbul, Türkiye</p>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Adınız" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="E-posta Adresiniz" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Konu" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Mesajınız" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary">Gönder</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="comments" class="comments-section">
+            <h2 class="section-title">Yorumlar</h2>
+            <div class="comments-container">
+                <div class="comment-filters">
+                    <button class="filter-btn active" data-filter="all">Tümü</button>
+                    <button class="filter-btn" data-filter="recent">En Yeni</button>
+                    <button class="filter-btn" data-filter="popular">En Popüler</button>
+                </div>
+                
+                <div class="comments-list">
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://picsum.photos/50/50" alt="Kullanıcı Avatarı">
+                            <div class="user-badge verified">Onaylı Yazar</div>
+                        </div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <div class="comment-user">
+                                    <h4>Ahmet Yılmaz</h4>
+                                    <span class="user-title">Yazılım Mühendisi</span>
+                                </div>
+                                <div class="comment-meta">
+                                    <span class="comment-date">2 Mart 2024</span>
+                                    <span class="comment-time">14:30</span>
+                                </div>
+                            </div>
+                            <div class="comment-text">
+                                <p>Harika bir yazı olmuş! Yapay zeka konusunda çok faydalı bilgiler edindim. Özellikle kod örnekleri çok açıklayıcı.</p>
+                                <div class="code-reference">
+                                    <pre><code class="language-javascript">// Bahsedilen kod bloğu
+const network = new NeuralNetwork(3, 4, 2);</code></pre>
+                                </div>
+                            </div>
+                            <div class="comment-actions">
+                                <button class="action-btn like-btn">
+                                    <i class="far fa-thumbs-up"></i>
+                                    <span class="like-count">24</span>
+                                </button>
+                                <button class="action-btn reply-btn">
+                                    <i class="far fa-comment"></i>
+                                    <span>Yanıtla</span>
+                                </button>
+                                <button class="action-btn share-btn">
+                                    <i class="far fa-share-square"></i>
+                                    <span>Paylaş</span>
+                                </button>
+                            </div>
+                            <div class="comment-replies">
+                                <div class="comment reply">
+                                    <div class="comment-avatar">
+                                        <img src="https://picsum.photos/51/51" alt="Kullanıcı Avatarı">
+                                    </div>
+                                    <div class="comment-content">
+                                        <div class="comment-header">
+                                            <h4>Ayşe Demir</h4>
+                                            <span class="comment-date">2 Mart 2024, 15:45</span>
+                                        </div>
+                                        <p>Teşekkürler! Kod örneğini kendi projemde de kullanabilirim.</p>
+                                        <div class="comment-actions">
+                                            <button class="action-btn like-btn">
+                                                <i class="far fa-thumbs-up"></i>
+                                                <span class="like-count">8</span>
+                                            </button>
+                                            <button class="action-btn reply-btn">
+                                                <i class="far fa-comment"></i>
+                                                <span>Yanıtla</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="comment-form">
+                    <h3>Yorum Yap</h3>
+                    <div class="form-group">
+                        <input type="text" placeholder="Adınız" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="E-posta Adresiniz" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Yorumunuz" required></textarea>
+                        <div class="editor-toolbar">
+                            <button type="button" class="toolbar-btn" title="Kalın"><i class="fas fa-bold"></i></button>
+                            <button type="button" class="toolbar-btn" title="İtalik"><i class="fas fa-italic"></i></button>
+                            <button type="button" class="toolbar-btn" title="Kod Bloğu"><i class="fas fa-code"></i></button>
+                            <button type="button" class="toolbar-btn" title="Link"><i class="fas fa-link"></i></button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" required>
+                            <span>Yorum yaparak <a href="#">kullanım şartlarını</a> kabul ediyorum</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn primary">Yorum Gönder</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="related-posts">
+            <h3 class="section-title">İlgili Yazılar</h3>
+            <div class="related-posts-grid">
+                <article class="related-post">
+                    <div class="related-post-image">
+                        <img src="https://picsum.photos/400/300" alt="İlgili Yazı">
+                    </div>
+                    <div class="related-post-content">
+                        <h4>Yapay Zeka ve Etik</h4>
+                        <p>Yapay zeka teknolojilerinin etik boyutu ve toplumsal etkileri...</p>
+                        <div class="related-post-meta">
+                            <span><i class="fas fa-calendar"></i> 28 Şubat 2024</span>
+                            <span><i class="fas fa-eye"></i> 856 görüntülenme</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="related-post">
+                    <div class="related-post-image">
+                        <img src="https://picsum.photos/400/301" alt="İlgili Yazı">
+                    </div>
+                    <div class="related-post-content">
+                        <h4>Geleceğin Meslekleri</h4>
+                        <p>Yapay zeka çağında öne çıkacak meslekler ve beceriler...</p>
+                        <div class="related-post-meta">
+                            <span><i class="fas fa-calendar"></i> 25 Şubat 2024</span>
+                            <span><i class="fas fa-eye"></i> 654 görüntülenme</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="post-suggestions">
+            <h3 class="section-title">Benzer Yazılar</h3>
+            <div class="suggestions-grid">
+                <!-- Öneriler JavaScript ile eklenecek -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Basit Blog</h3>
+                <p>Teknoloji ve yaşam üzerine düşünceler.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Hızlı Bağlantılar</h3>
+                <ul>
+                    <li><a href="#home">Ana Sayfa</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#archive">Arşiv</a></li>
+                    <li><a href="#about">Hakkımda</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Sosyal Medya</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Basit Blog. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- Okuma Listesi Modal -->
+    <div class="reading-list-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Okuma Listem</h3>
+                <button class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="reading-list-items">
+                <!-- Okuma listesi öğeleri JavaScript ile eklenecek -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Yorum Bildirimleri -->
+    <div class="notification-center">
+        <button class="notification-toggle">
+            <i class="fas fa-bell"></i>
+            <span class="notification-count">0</span>
+        </button>
+        <div class="notification-dropdown">
+            <div class="notification-header">
+                <h3>Bildirimler</h3>
+                <button class="mark-all-read">Tümünü Okundu İşaretle</button>
+            </div>
+            <div class="notification-list">
+                <!-- Bildirimler JavaScript ile eklenecek -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Yazı İçi Arama Modal -->
+    <div class="in-post-search-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Yazı İçinde Ara</h3>
+                <button class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="search-form">
+                <input type="text" placeholder="Aranacak kelime..." class="in-post-search-input">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="search-results">
+                <!-- Arama sonuçları buraya eklenecek -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Arama fonksiyonu
+        document.querySelector('.search-button').addEventListener('click', function() {
+            const searchTerm = document.querySelector('.search-input').value.toLowerCase();
+            const posts = document.querySelectorAll('.post');
+            let resultsFound = false;
+
+            posts.forEach(post => {
+                const title = post.querySelector('h2').textContent.toLowerCase();
+                const content = post.querySelector('p').textContent.toLowerCase();
+                const tags = Array.from(post.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase());
+
+                if (title.includes(searchTerm) || content.includes(searchTerm) || tags.some(tag => tag.includes(searchTerm))) {
+                    post.style.display = 'block';
+                    resultsFound = true;
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+
+            // Sonuç bulunamadı mesajı
+            const noResults = document.querySelector('.no-results');
+            if (!resultsFound) {
+                if (!noResults) {
+                    const message = document.createElement('div');
+                    message.className = 'no-results';
+                    message.innerHTML = '<p>Aramanızla eşleşen sonuç bulunamadı.</p>';
+                    document.querySelector('.posts-grid').appendChild(message);
+                }
+            } else if (noResults) {
+                noResults.remove();
+            }
+        });
+
+        // Kategori filtreleme
+        document.querySelectorAll('.categories a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const category = this.textContent.split(' ')[0].toLowerCase();
+                const posts = document.querySelectorAll('.post');
+
+                posts.forEach(post => {
+                    const postCategory = post.querySelector('.post-category').textContent.toLowerCase();
+                    if (category === 'tümü' || postCategory === category) {
+                        post.style.display = 'block';
+                    } else {
+                        post.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Mobil menü
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Sayfa yüklendiğinde animasyon
+        document.addEventListener('DOMContentLoaded', function() {
+            const posts = document.querySelectorAll('.post');
+            posts.forEach((post, index) => {
+                post.style.opacity = '0';
+                post.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    post.style.transition = 'all 0.5s ease';
+                    post.style.opacity = '1';
+                    post.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+
+        // Dark Mode Toggle
+        const themeToggle = document.querySelector('.theme-toggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const icon = themeToggle.querySelector('i');
+            if (body.classList.contains('dark-mode')) {
+                icon.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icon.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Tema tercihini kontrol et
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            themeToggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+        }
+
+        // Okuma Listesi
+        const readingList = {
+            items: JSON.parse(localStorage.getItem('readingList')) || [],
+            modal: document.querySelector('.reading-list-modal'),
+            toggle: document.querySelector('.reading-list-toggle'),
+            count: document.querySelector('.reading-list-count'),
+            itemsContainer: document.querySelector('.reading-list-items'),
+
+            init() {
+                this.updateCount();
+                this.toggle.addEventListener('click', () => this.toggleModal());
+                document.querySelector('.close-modal').addEventListener('click', () => this.toggleModal());
+                this.renderItems();
+            },
+
+            addItem(post) {
+                if (!this.items.find(item => item.id === post.id)) {
+                    this.items.push(post);
+                    this.save();
+                    this.updateCount();
+                    this.renderItems();
+                }
+            },
+
+            removeItem(id) {
+                this.items = this.items.filter(item => item.id !== id);
+                this.save();
+                this.updateCount();
+                this.renderItems();
+            },
+
+            save() {
+                localStorage.setItem('readingList', JSON.stringify(this.items));
+            },
+
+            updateCount() {
+                this.count.textContent = this.items.length;
+            },
+
+            toggleModal() {
+                this.modal.classList.toggle('active');
+            },
+
+            renderItems() {
+                this.itemsContainer.innerHTML = this.items.map(item => `
+                    <div class="reading-list-item">
+                        <img src="${item.image}" alt="${item.title}">
+                        <div class="item-content">
+                            <h4>${item.title}</h4>
+                            <p>${item.excerpt}</p>
+                        </div>
+                        <button class="remove-item" data-id="${item.id}">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                `).join('');
+
+                // Remove item butonlarına event listener ekle
+                this.itemsContainer.querySelectorAll('.remove-item').forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        const id = e.currentTarget.dataset.id;
+                        this.removeItem(id);
+                    });
+                });
+            }
+        };
+
+        // Okuma listesini başlat
+        readingList.init();
+
+        // Blog yazılarına "Okuma Listesine Ekle" butonu ekle
+        document.querySelectorAll('.post').forEach(post => {
+            const addToListBtn = document.createElement('button');
+            addToListBtn.className = 'add-to-reading-list';
+            addToListBtn.innerHTML = '<i class="fas fa-bookmark"></i> Okuma Listesine Ekle';
+            
+            addToListBtn.addEventListener('click', () => {
+                const postData = {
+                    id: post.dataset.id,
+                    title: post.querySelector('h2').textContent,
+                    excerpt: post.querySelector('p').textContent,
+                    image: post.querySelector('img').src
+                };
+                readingList.addItem(postData);
+            });
+
+            post.querySelector('.post-footer').appendChild(addToListBtn);
+        });
+
+        // Beğeni ve Paylaşım İstatistikleri
+        const postStats = {
+            charts: {},
+            
+            init() {
+                this.initCharts();
+                this.initPeriodButtons();
+            },
+
+            initCharts() {
+                const ctx = {
+                    views: document.getElementById('viewsChart').getContext('2d'),
+                    shares: document.getElementById('sharesChart').getContext('2d'),
+                    engagement: document.getElementById('engagementChart').getContext('2d')
+                };
+
+                const commonOptions = {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.1)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                };
+
+                this.charts.views = new Chart(ctx.views, {
+                    type: 'line',
+                    data: this.getChartData('views'),
+                    options: commonOptions
+                });
+
+                this.charts.shares = new Chart(ctx.shares, {
+                    type: 'bar',
+                    data: this.getChartData('shares'),
+                    options: commonOptions
+                });
+
+                this.charts.engagement = new Chart(ctx.engagement, {
+                    type: 'doughnut',
+                    data: this.getChartData('engagement'),
+                    options: {
+                        ...commonOptions,
+                        cutout: '70%'
+                    }
+                });
+            },
+
+            getChartData(type) {
+                const colors = {
+                    views: '#3b82f6',
+                    shares: '#10b981',
+                    engagement: ['#3b82f6', '#10b981', '#f59e0b']
+                };
+
+                const data = {
+                    views: {
+                        labels: ['Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt', 'Paz'],
+                        datasets: [{
+                            data: [1200, 1900, 1500, 2100, 1800, 2400, 2000],
+                            borderColor: colors.views,
+                            tension: 0.4
+                        }]
+                    },
+                    shares: {
+                        labels: ['Twitter', 'Facebook', 'LinkedIn'],
+                        datasets: [{
+                            data: [45, 30, 25],
+                            backgroundColor: colors.shares
+                        }]
+                    },
+                    engagement: {
+                        labels: ['Beğeni', 'Yorum', 'Paylaşım'],
+                        datasets: [{
+                            data: [128, 45, 32],
+                            backgroundColor: colors.engagement
+                        }]
+                    }
+                };
+
+                return data[type];
+            },
+
+            initPeriodButtons() {
+                document.querySelectorAll('.stats-period button').forEach(button => {
+                    button.addEventListener('click', () => {
+                        document.querySelector('.stats-period button.active').classList.remove('active');
+                        button.classList.add('active');
+                        this.updateCharts(button.dataset.period);
+                    });
+                });
+            },
+
+            updateCharts(period) {
+                // Burada normalde API'den yeni veriler alınır
+                // Şimdilik örnek verilerle çalışıyoruz
+                const newData = {
+                    week: {
+                        views: [1200, 1900, 1500, 2100, 1800, 2400, 2000],
+                        shares: [45, 30, 25],
+                        engagement: [128, 45, 32]
+                    },
+                    month: {
+                        views: Array.from({length: 30}, () => Math.floor(Math.random() * 2000) + 1000),
+                        shares: [120, 80, 60],
+                        engagement: [350, 120, 90]
+                    },
+                    year: {
+                        views: Array.from({length: 12}, () => Math.floor(Math.random() * 5000) + 3000),
+                        shares: [450, 300, 250],
+                        engagement: [1200, 450, 300]
+                    }
+                };
+
+                this.charts.views.data.datasets[0].data = newData[period].views;
+                this.charts.shares.data.datasets[0].data = newData[period].shares;
+                this.charts.engagement.data.datasets[0].data = newData[period].engagement;
+
+                this.charts.views.update();
+                this.charts.shares.update();
+                this.charts.engagement.update();
+            }
+        };
+
+        // İlgili Yazılar
+        const relatedPosts = {
+            init() {
+                this.loadRelatedPosts();
+            },
+
+            loadRelatedPosts() {
+                // Burada normalde bir API'den ilgili yazılar yüklenir
+                // Şimdilik örnek verilerle çalışıyoruz
+                const currentPostTags = Array.from(document.querySelectorAll('.post-tags .tag'))
+                    .map(tag => tag.textContent.toLowerCase());
+
+                // İlgili yazıları filtrele ve göster
+                document.querySelectorAll('.related-post').forEach(post => {
+                    const postTags = Array.from(post.querySelectorAll('.tag'))
+                        .map(tag => tag.textContent.toLowerCase());
+                    
+                    const hasCommonTags = currentPostTags.some(tag => postTags.includes(tag));
+                    post.style.display = hasCommonTags ? 'block' : 'none';
+                });
+            }
+        };
+
+        // Yazı İçi Navigasyon
+        const postNavigation = {
+            init() {
+                this.initTableOfContents();
+                this.initReadingProgress();
+            },
+
+            initTableOfContents() {
+                const toc = document.querySelector('.table-of-contents ul');
+                const headings = document.querySelectorAll('.post-content h2, .post-content h3');
+                
+                headings.forEach((heading, index) => {
+                    const id = `section-${index}`;
+                    heading.id = id;
+                    
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.href = `#${id}`;
+                    a.textContent = heading.textContent;
+                    
+                    if (heading.tagName === 'H3') {
+                        li.style.marginLeft = '1.5rem';
+                    }
+                    
+                    li.appendChild(a);
+                    toc.appendChild(li);
+                });
+
+                // Başlıkları izle
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        const id = entry.target.id;
+                        const link = toc.querySelector(`a[href="#${id}"]`);
+                        
+                        if (entry.isIntersecting) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                headings.forEach(heading => observer.observe(heading));
+            },
+
+            initReadingProgress() {
+                const progressBar = document.querySelector('.progress-bar');
+                
+                window.addEventListener('scroll', () => {
+                    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    const scrolled = (window.scrollY / windowHeight) * 100;
+                    progressBar.style.width = `${scrolled}%`;
+                });
+            }
+        };
+
+        // Yorum Bildirimleri
+        const notifications = {
+            items: [],
+            count: 0,
+            dropdown: document.querySelector('.notification-dropdown'),
+            toggle: document.querySelector('.notification-toggle'),
+            countElement: document.querySelector('.notification-count'),
+            list: document.querySelector('.notification-list'),
+
+            init() {
+                this.loadNotifications();
+                this.initEventListeners();
+            },
+
+            loadNotifications() {
+                // Örnek bildirimler
+                this.items = [
+                    {
+                        id: 1,
+                        type: 'comment',
+                        message: 'Ahmet yazınıza yorum yaptı: "Harika bir yazı olmuş!"',
+                        time: '5 dakika önce',
+                        read: false
+                    },
+                    {
+                        id: 2,
+                        type: 'reply',
+                        message: 'Ayşe yorumunuza yanıt verdi: "Teşekkürler!"',
+                        time: '1 saat önce',
+                        read: false
+                    }
+                ];
+                this.updateNotifications();
+            },
+
+            initEventListeners() {
+                this.toggle.addEventListener('click', () => this.toggleDropdown());
+                document.querySelector('.mark-all-read').addEventListener('click', () => this.markAllAsRead());
+            },
+
+            toggleDropdown() {
+                this.dropdown.classList.toggle('active');
+            },
+
+            markAllAsRead() {
+                this.items.forEach(item => item.read = true);
+                this.updateNotifications();
+            },
+
+            addNotification(notification) {
+                this.items.unshift(notification);
+                this.updateNotifications();
+            },
+
+            updateNotifications() {
+                this.count = this.items.filter(item => !item.read).length;
+                this.countElement.textContent = this.count;
+                
+                this.list.innerHTML = this.items.map(item => `
+                    <div class="notification-item ${item.read ? 'read' : ''}">
+                        <div class="notification-content">
+                            <p>${item.message}</p>
+                            <span class="notification-time">${item.time}</span>
+                        </div>
+                        ${!item.read ? '<div class="notification-dot"></div>' : ''}
+                    </div>
+                `).join('');
+            }
+        };
+
+        // Sosyal Medya Paylaşımı
+        const socialShare = {
+            init() {
+                document.querySelectorAll('.social-share-btn').forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        const platform = e.currentTarget.title.split(' ')[0].toLowerCase();
+                        this.shareContent(platform);
+                    });
+                });
+            },
+
+            shareContent(platform) {
+                const title = document.title;
+                const url = window.location.href;
+                const shareUrls = {
+                    twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`,
+                    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
+                    linkedin: `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`
+                };
+
+                window.open(shareUrls[platform], '_blank', 'width=600,height=400');
+            }
+        };
+
+        // Yazı İçi Arama
+        const inPostSearch = {
+            modal: document.querySelector('.in-post-search-modal'),
+            input: document.querySelector('.in-post-search-input'),
+            results: document.querySelector('.search-results'),
+            closeBtn: document.querySelector('.in-post-search-modal .close-modal'),
+
+            init() {
+                // Ctrl+F veya Cmd+F kısayolu
+                document.addEventListener('keydown', (e) => {
+                    if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
+                        e.preventDefault();
+                        this.openModal();
+                    }
+                });
+
+                // ESC tuşu ile kapatma
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        this.closeModal();
+                    }
+                });
+
+                this.closeBtn.addEventListener('click', () => this.closeModal());
+                this.input.addEventListener('input', () => this.search());
+            },
+
+            openModal() {
+                this.modal.classList.add('active');
+                this.input.focus();
+            },
+
+            closeModal() {
+                this.modal.classList.remove('active');
+                this.input.value = '';
+                this.results.innerHTML = '';
+            },
+
+            search() {
+                const searchTerm = this.input.value.toLowerCase();
+                if (searchTerm.length < 2) {
+                    this.results.innerHTML = '';
+                    return;
+                }
+
+                const content = document.querySelector('.post-content').textContent;
+                const matches = this.findMatches(content, searchTerm);
+                this.displayResults(matches, searchTerm);
+            },
+
+            findMatches(content, searchTerm) {
+                const matches = [];
+                let index = content.toLowerCase().indexOf(searchTerm);
+                
+                while (index !== -1) {
+                    const start = Math.max(0, index - 50);
+                    const end = Math.min(content.length, index + searchTerm.length + 50);
+                    const excerpt = content.substring(start, end);
+                    
+                    matches.push({
+                        excerpt,
+                        position: index
+                    });
+                    
+                    index = content.toLowerCase().indexOf(searchTerm, index + 1);
+                }
+                
+                return matches;
+            },
+
+            displayResults(matches, searchTerm) {
+                if (matches.length === 0) {
+                    this.results.innerHTML = '<p class="no-results">Sonuç bulunamadı.</p>';
+                    return;
+                }
+
+                this.results.innerHTML = matches.map(match => `
+                    <div class="search-result-item">
+                        <p>...${match.excerpt}...</p>
+                        <button class="go-to-result" data-position="${match.position}">
+                            <i class="fas fa-arrow-right"></i> Git
+                        </button>
+                    </div>
+                `).join('');
+
+                // Sonuçlara git butonlarına tıklama olayı ekle
+                this.results.querySelectorAll('.go-to-result').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const position = parseInt(button.dataset.position);
+                        this.scrollToResult(position);
+                    });
+                });
+            },
+
+            scrollToResult(position) {
+                const content = document.querySelector('.post-content');
+                const element = document.createElement('span');
+                element.className = 'highlight';
+                element.textContent = content.textContent.substring(position, position + this.input.value.length);
+                
+                content.innerHTML = content.innerHTML.replace(
+                    content.textContent.substring(position, position + this.input.value.length),
+                    element.outerHTML
+                );
+
+                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // 2 saniye sonra vurgulamayı kaldır
+                setTimeout(() => {
+                    element.outerHTML = element.textContent;
+                }, 2000);
+            }
+        };
+
+        // Yazı Önerileri
+        const postSuggestions = {
+            init() {
+                this.loadSuggestions();
+            },
+
+            loadSuggestions() {
+                // Burada normalde bir API'den öneriler yüklenir
+                // Şimdilik örnek verilerle çalışıyoruz
+                const suggestions = [
+                    {
+                        title: 'Yapay Zeka ve Etik',
+                        excerpt: 'Yapay zeka teknolojilerinin etik boyutu ve toplumsal etkileri...',
+                        image: 'https://picsum.photos/400/300',
+                        views: 856,
+                        date: '28 Şubat 2024'
+                    },
+                    {
+                        title: 'Geleceğin Meslekleri',
+                        excerpt: 'Yapay zeka çağında öne çıkacak meslekler ve beceriler...',
+                        image: 'https://picsum.photos/400/301',
+                        views: 654,
+                        date: '25 Şubat 2024'
+                    },
+                    {
+                        title: 'Dijital Dönüşüm',
+                        excerpt: 'İşletmelerin dijital dönüşüm sürecinde dikkat etmesi gerekenler...',
+                        image: 'https://picsum.photos/400/302',
+                        views: 789,
+                        date: '22 Şubat 2024'
+                    }
+                ];
+
+                this.renderSuggestions(suggestions);
+            },
+
+            renderSuggestions(suggestions) {
+                const container = document.querySelector('.suggestions-grid');
+                container.innerHTML = suggestions.map(suggestion => `
+                    <article class="suggestion-card">
+                        <div class="suggestion-image">
+                            <img src="${suggestion.image}" alt="${suggestion.title}">
+                        </div>
+                        <div class="suggestion-content">
+                            <h4>${suggestion.title}</h4>
+                            <p>${suggestion.excerpt}</p>
+                            <div class="suggestion-meta">
+                                <span><i class="fas fa-calendar"></i> ${suggestion.date}</span>
+                                <span><i class="fas fa-eye"></i> ${suggestion.views} görüntülenme</span>
+                            </div>
+                        </div>
+                    </article>
+                `).join('');
+            }
+        };
+
+        // Özellikleri başlat
+        document.addEventListener('DOMContentLoaded', () => {
+            postStats.init();
+            relatedPosts.init();
+            postNavigation.init();
+            notifications.init();
+            socialShare.init();
+            inPostSearch.init();
+            postSuggestions.init();
+        });
+    </script>
+</body>
+</html> 
